@@ -26,6 +26,46 @@ var sentientItemConflictTxt = "\u25C6 Sentient Item Conflict (SRD 252, DMG 216)"
 ]);
 
 var Base_MagicItemsList = {
+	
+	"scale of the dragon mother" : {
+		name: "Scale of the Dragon Mother",
+		source: [["SRD",243], ["D",201]], 
+		type: "artifact",
+		rarity: "legendary",
+		description: "I have resistance to fire while I'm attuned to this scale. It has 6 charges, regaining 1d6+4 expended charges at dawn. I can use its charges to cast Burning Hands (1 charge), Schorching Ray (2 charges), Fireball (3 charges), Fire Shield (4 charges, warm shield only), & Wall of Fire (4 charges), with a save DC 15 & +7 spell attack modifier.",
+		descriptionFull: "You have resistance to fire damage while you hold this staff.\n The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: Burning Hands (1 charge), Fireball (3 charges), or Wall of Fire (4 charges).\n The staff regains 1d6+4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the scale blackens, crumbles into cinders, and is destroyed.",
+		attunement: true,
+		weight: 4,
+		usages: 6,
+		recovery: "dawn",
+		additional: "regains 1d4+2",
+		dmgres: ["Fire"],
+		fixeddc: 15,
+		spellFirstColTitle: "Ch",
+		spellcastingBonus: [{
+			name: "1 charge",
+			spells: ["burning hands"], 
+			selection: ["burning hands"], 
+			firstCol: 1
+		},{
+			name: "2 charges",
+			spells: ["scorching ray"],
+			selection: ["scorching ray"],
+			firstCol: 2
+		},{
+			name: "3 charges",
+			spells: ["fireball"],
+			selection: ["fireball"],
+			firstCol: 3
+		},{
+			name: "4 charges",
+			spells: ["fire shield", "wall of fire"],
+			selection: ["fire shield", "wall of fire"],
+			firstCol: 4,
+			times: 2
+		}]
+	},
+	
 	"adamantine armor" : {
 		name : "Adamantine Armor",
 		source : [["SRD", 207], ["D", 150]],
